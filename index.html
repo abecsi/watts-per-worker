@@ -22,7 +22,9 @@ a{color:var(--blue)}sup a{text-decoration:none;font-size:11px;font-weight:600}
 .topbar{background:var(--hero);border-bottom:1px solid rgba(255,255,255,.12);color:var(--herosub);font:12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}
 .topbar .in{max-width:1180px;margin:0 auto;padding:12px 16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
 .topbar button{font:inherit;letter-spacing:inherit;text-transform:inherit;background:none;border:1px solid rgba(255,255,255,.25);color:var(--heroink);border-radius:3px;padding:6px 10px;cursor:pointer}
-.topbar button:hover{border-color:#fff}.tb-actions{display:flex;gap:8px;flex-wrap:wrap}
+.topbar button:hover{border-color:#fff}
+.topbar a.sub{color:#0a0e27;background:#7aa7ff;border:1px solid #7aa7ff;border-radius:3px;padding:6px 10px;text-decoration:none}.topbar a.sub:hover{background:#fff;border-color:#fff}
+.topbar a.home{color:inherit;text-decoration:none}.topbar a.home:hover{color:#fff}.tb-actions{display:flex;gap:8px;flex-wrap:wrap}
 .hero{background:var(--hero);color:var(--heroink)}
 .hero .in{max-width:1180px;margin:0 auto;padding:56px 16px 64px}
 .eyebrow{font:13px/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#7aa7ff}
@@ -107,8 +109,8 @@ th,td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:right}th:fi
 @media (max-width:520px){body{font-size:16px}.glance .box{padding:18px 16px 4px}.gl .v{font-size:34px}.calc{padding:14px}}
 </style></head>
 <body>
-<div class="topbar"><div class="in"><span>Attila Bécsi · Open-data studies</span>
- <span class="tb-actions"><button id="b-data">Download data</button><button id="b-cite">Cite</button><button id="b-share">Copy link</button><button id="theme" aria-label="Toggle dark mode">◐ Theme</button></span></div></div>
+<div class="topbar"><div class="in"><a class="home" href="https://abecsi.github.io">Attila Bécsi · Open-data studies</a>
+ <span class="tb-actions"><a class="sub" href="https://abecsi.substack.com">Subscribe</a><button id="b-data">Download data</button><button id="b-cite">Cite</button><button id="b-share">Copy link</button><button id="theme" aria-label="Toggle dark mode">◐ Theme</button></span></div></div>
 
 <header class="hero"><div class="in">
  <div class="eyebrow">AI infrastructure · energy and materials</div>
@@ -291,7 +293,7 @@ th,td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:right}th:fi
 <li id="ref-17">[17] J. Friedmann and C. McCormick, "Embodied Greenhouse Gas Emissions (Scope 3)", ICEF <i>Sustainable Data Centers Roadmap</i>, ch. 3.3, October 2025: Box 3.3-1, 200 MW reference with 55,000–500,000 m³ concrete (300,000 assumed) and 50–75 kt steel; 275 t steel/MW (Schneider Electric). <a href="https://icef.go.jp/">icef.go.jp</a></li>
 <li id="ref-18">[18] U.S. Geological Survey, <i>Mineral Commodity Summaries 2026</i>: world copper mine production ~23 Mt and cement ~3.8 Gt in 2025 <a href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf">usgs.gov</a>; World Steel Association, crude steel production 1,849.4 Mt in 2025 (press release, 23 January 2026) <a href="https://worldsteel.org/media/press-releases/2026/december-2025-crude-steel-production-2025-global-crude-steel-production/">worldsteel.org</a>.</li>
 </ul>
-<p class="foot">Personal analysis from public sources, prepared in a personal capacity. Not investment advice; not affiliated with or endorsed by any organization named.</p>
+<p class="foot">Personal analysis from public sources, prepared in a personal capacity. Not investment advice; not affiliated with or endorsed by any organization named.<br>More studies: <a href="https://abecsi.github.io">abecsi.github.io</a> · New studies by email: <a href="https://abecsi.substack.com">abecsi.substack.com</a></p>
 </section>
 </article>
 </div>
