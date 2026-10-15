@@ -49,6 +49,7 @@ article{min-width:0;max-width:760px}
 article p{margin:0 0 18px}
 .sec{padding-top:12px;margin-top:40px;scroll-margin-top:16px}
 .secno{font:500 13px var(--mono);letter-spacing:.14em;color:var(--blue)}
+.sub3{font:700 22px/1.25 var(--serif);color:var(--navy);margin:34px 0 12px}
 article h2{font:700 clamp(26px,3.6vw,36px)/1.15 var(--serif);color:var(--navy);margin:8px 0 18px;letter-spacing:-.01em}
 .lead{font-size:19px;line-height:1.6;color:var(--ink)}
 .ex{margin:30px 0 34px;border-top:2px solid var(--navy);padding-top:14px;min-width:0}
@@ -129,24 +130,24 @@ th,td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:right}th:fi
 <div class="wrap">
 <nav class="toc" aria-label="Contents"><div class="h">Contents</div>
  <a href="#s1"><span>01</span>Prompts and tasks</a>
- <a href="#s2"><span>02</span>Multiply by a billion desks</a>
+ <a href="#s2"><span>02</span>Scale it to a billion people</a>
  <a href="#s3"><span>03</span>Machines and power equipment</a>
  <a href="#s3b"><span>04</span>Land and raw materials</a>
  <a href="#s4"><span>05</span>The materials nobody agrees on</a>
- <a href="#s5"><span>06</span>So, could it happen?</a>
+ <a href="#s5"><span>06</span>So, is it realistic?</a>
  <a href="#s6"><span>—</span>Method and sources</a>
  <div class="prog"><i id="prog"></i></div>
 </nav>
 
 <article>
 <p class="lead">We keep reading and hearing about the threat AI poses to jobs, especially office jobs, and what that would mean for society. I wanted to find out whether such widespread use of AI would even be physically possible. This is the angle we rarely read about, even though it sets the limits of what is feasible. So let's look at the numbers.</p>
-<p>We can start with two figures. A chatbot answer burns about 0.3 Wh of electricity, roughly what a light bulb uses in a few seconds. One AI agent, measured while it worked through a real task with tools, used 348 Wh. That's a thousand times more. And that gap, more than any chip or model launch, decides what "AI for every office worker" would actually mean. I'm not forecasting lost jobs here, but asking a blunter question: if AI did the work, what would the machines need?</p>
-<p>Most debates about AI and energy start at one of two extremes. Either a single prompt, which looks harmless, or a whole national grid, which looks overwhelming. The interesting part sits in between, and it's just arithmetic: how many tasks, by how many people, at how many watt-hours each. The inputs are public now, so we can run the sums ourselves, for the more than one billion knowledge workers that Gartner counts worldwide,<sup><a href="#ref-5">5</a></sup> in a world where the ILO finds one in four jobs exposed to generative AI.<sup><a href="#ref-6">6</a></sup> The answer turns out to hinge on one choice: whether the AI answers our questions or does the work.</p>
+<p>We can start with two figures. A chatbot answer burns about 0.3 Wh of electricity, roughly what a light bulb uses in a few seconds. One AI agent, measured while it worked through a real task with tools, used 348 Wh. That's a thousand times more. And that gap, more than any chip or model launch, decides what "AI for every office worker" would actually mean. I'm not forecasting lost jobs here, but asking a simpler question: if AI did the work, what would the machines need?</p>
+<p>Most debates about AI and energy start at one of two extremes. Either a single prompt, which looks harmless, or a whole national grid, which looks overwhelming. The interesting part sits in between, and it's just arithmetic: how many tasks, by how many people, at how many watt-hours each. The inputs are public now, so we can run the sums ourselves, for the roughly one billion knowledge workers on the planet.<sup><a href="#ref-5">5</a></sup> The ILO finds one in four jobs exposed to generative AI.<sup><a href="#ref-6">6</a></sup></p>
 
 <section class="sec" id="s1"><div class="secno">01</div>
 <h2>Cheap prompts but expensive tasks</h2>
-<p>Google says its median Gemini text prompt costs 0.24 Wh, idle chips and cooling included.<sup><a href="#ref-2">2</a></sup> A 2026 study in <i>Joule</i> by Oviedo and colleagues lands in the same neighborhood, 0.31 Wh for a standard answer of about 300 output tokens. If we let the model think through 5,000 tokens, though, the bill climbs to 3.91 Wh, thirteen times more.<sup><a href="#ref-3">3</a></sup> More tokens, more energy. Simple as that.</p>
-<p>Agents consume more. A KAIST team ran agents built on a 70-billion-parameter model through real tool-using tasks and clocked 348.41 Wh per task on average, 136.5 times a simple question-answering run on the same setup, while the GPUs sat idle for up to 54.5% of the time, waiting on the tools to answer.<sup><a href="#ref-4">4</a></sup> That's a research rig, not a polished commercial service, so we should treat it as a ceiling. But it shows us the shape of the problem plainly enough. An agent loops. It calls a tool, rereads its own context, tries again, and every lap costs watt-hours.</p>
+<p>Google says its median text prompt costs 0.24 Wh, idle chips and cooling included.<sup><a href="#ref-2">2</a></sup> A 2026 study in <i>Joule</i> by Oviedo and colleagues lands in the same neighborhood, 0.31 Wh for a standard answer. If we let the model think through 5,000 tokens, though, the bill climbs to 3.91 Wh.<sup><a href="#ref-3">3</a></sup> More tokens, more energy. Simple as that.</p>
+<p>Agents consume more. A KAIST team ran agents built on a 70-billion-parameter model through real tool-using tasks and clocked 348 Wh per task, while the GPUs sat idle for up to half the time, waiting on the tools to answer.<sup><a href="#ref-4">4</a></sup> That's a research rig, not a polished commercial service, so we should treat it as a ceiling. But it shows us the shape of the problem plainly enough. An agent loops. It calls a tool, rereads its own context, tries again, and every lap costs watt-hours.</p>
 
 <figure class="ex" id="ex1" data-n="1"><div class="lab">Exhibit 1</div>
 <div class="t">Energy per AI task spans more than three orders of magnitude</div>
@@ -160,7 +161,7 @@ th,td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:right}th:fi
 </section>
 
 <section class="sec" id="s2"><div class="secno">02</div>
-<h2>Now multiply by a billion desks</h2>
+<h2>What if you scale it to a billion people</h2>
 <p>The model below is deliberately simple: workers × tasks per day × energy per task × working days, with an optional factor for data-center overhead and one for efficiency gains. We can choose a preset, then move the sliders. Every output updates against the same fixed yardsticks: all data centers on Earth in 2024 (415 TWh), the IEA's 2030 and 2035 projections, and total global electricity demand in 2025 (31,779 TWh).<sup><a href="#ref-1">1</a>,<a href="#ref-7">7</a></sup></p>
 
 <figure class="ex" id="ex2" data-n="2"><div class="lab">Exhibit 2</div>
@@ -197,10 +198,10 @@ th,td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:right}th:fi
 <div class="notes">Assumes 250 working days a year. Load and rack counts are year-round averages at 100% utilization, so they are floors: real fleets run below full load and peak when office hours overlap.</div>
 <div class="bar"></div></figure>
 
-<p>If we run the presets in order, the story tells itself. If we give a billion people an assistant that answers 30 questions a day, we need about 2.3 TWh a year. Data centers already used 415 TWh in 2024. They'd barely feel it. If we swap those for 100 long reasoning answers per person, demand climbs to about 98 TWh, which sounds like a lot, yet still fits inside what the industry is already building.</p>
-<p>Agents break the pattern. Twenty agent tasks a day, at the measured 348 Wh, add up to roughly 1,740 TWh a year, more than the IEA's most aggressive 2035 case for <i>all</i> data centers combined, from this single use. If we let those agents run around the clock as a fleet, the total passes half of the world's electricity. No grid is planning for that, and none could build it this decade.</p>
+<p>If we assume an assistant that answers 30 questions a day for a billion people, it needs about 2 TWh a year. Today's data centers, at 415 TWh in 2024, would barely notice this demand. If you give each worker 100 long reasoning answers a day, it rises to about 98 TWh, which is large, but inside what the industry is already building toward.</p>
+<p>However, agents change the picture. Twenty agent tasks a day at the measured 348 Wh adds up to about 1,740 TWh a year, more than the IEA's highest 2035 scenario for all data centers combined, from this one use. If we let those agents run around the clock as a fleet, the total passes half of the world's electricity. No grid is planning for that, and none could build it this decade.</p>
 <div class="pull">Twenty agent tasks a day for a billion workers would use more electricity than every data center on Earth in the IEA's highest 2035 case.</div>
-<p>Is efficiency the escape hatch? Partly. Google says the energy of its median prompt fell 33-fold in twelve months,<sup><a href="#ref-2">2</a></sup> and Oviedo and colleagues see another eight- to ninefold savings within reach. If we apply 8.5× to the agent case, it falls to about 205 TWh, roughly half of today's data-center total. That said, cheaper tasks have a habit of multiplying. When we make something cheap, we do more of it, an old story in energy, and the tokens-per-task curve is rising faster than the energy-per-token curve is falling.</p>
+<p>We should also consider efficiency as the counterweight. Google says the energy of its median prompt fell 33-fold in twelve months,<sup><a href="#ref-2">2</a></sup> and the Oviedo study sees 8–9× savings within reach, which would bring the agent case back to about 205 TWh, roughly half of today's data-center total. However, when a task gets cheaper, people run more of them.</p>
 </section>
 
 <section class="sec" id="s3"><div class="secno">03</div>
@@ -221,9 +222,10 @@ th,td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:right}th:fi
 </section>
 
 <section class="sec" id="s3b"><div class="secno">04</div>
-<h2>Where it would sit, and what it is made of</h2>
-<p>Electricity has to come from somewhere, and the halls that use it have to stand somewhere. We can use two recent campuses as a handy yardstick: Stargate Abilene puts 1.2 GW on about 875 acres, and Meta's Hyperion plans 5 GW on 3,200 acres, so a gigawatt of AI capacity needs roughly 2.6 to 3 square kilometers of land.<sup><a href="#ref-15">15</a></sup> If we scale that to the agent scenario, at about 199 GW, we get around 560 km² of campuses, the footprint of a large city.</p>
-<p>Here's the twist, though. The halls are the small part. If all of those 1,740 TWh came from solar farms, NREL's measured land use of 3.5 acres per gigawatt-hour a year puts the panels, roads and substations on 21,000 to 28,000 km².<sup><a href="#ref-16">16</a></sup> That's about the size of New Jersey, and it doesn't include a single battery to carry the load through the night. Gas plants would need far less land, but they need turbines the factories have already sold. Either way, the map below makes one point plainly: the question of AI at work is also a land-use question.</p>
+<h2>The land behind the electricity</h2>
+<p>In my previous study, <a href="https://abecsi.github.io/concrete-and-compute/"><i>Concrete and Compute</i></a>, we could see how fast a construction site turns into a data center, as satellite images show the monthly progress well. What is also interesting is to see how much physical space these buildings would occupy if we scale them up to the levels needed for one billion agentic users.</p>
+<p>To estimate the area needed for data centers, there are two recent campuses that give a comparison: Stargate Abilene puts 1.2 GW on about 875 acres, and Meta's Hyperion plans 5 GW on 3,200.<sup><a href="#ref-15">15</a></sup> The agent scenario would need around 560 km² of campuses, which is the size of a large city.</p>
+<p>The power supply is the larger footprint. If all of that electricity came from solar farms, NREL's measured land use puts the panels, roads and substations on roughly 21,000 to 28,000 km², about the size of New Jersey.<sup><a href="#ref-16">16</a></sup></p>
 
 <figure class="ex" id="ex5" data-n="5"><div class="lab">Exhibit 5 </div>
 <div class="t">The land behind the scenario: campuses are a city, a solar supply would be a small country</div>
@@ -242,8 +244,9 @@ th,td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:right}th:fi
 <div class="notes">Squares show area, not where anything would be built. Campus land uses 2.8 km² per GW of average load (midpoint of 2.6–3.0) and is a floor at 100% utilization. Solar land covers generation only; storage to deliver power at night is not included. Areas are rounded to three significant figures. NREL's plant-level spread is wide (40% of plants fall between 3 and 4 acres per GWh/yr), so the solar figure is a range: about 21,000–28,000 km² for the agent scenario. New Jersey 22,591 km², Belgium 30,689 km² (total area).</div>
 <div class="bar"></div></figure>
 
-<p>The best public reference we have is the ICEF's model of a 200 MW data center: about 300,000 cubic meters of concrete for the whole site, within a range of 55,000 to 500,000, plus roughly 275 tonnes of steel for every megawatt.<sup><a href="#ref-17">17</a></sup> If we scale it up, we land near 720 million tonnes of concrete and 55 million tonnes of steel. Huge numbers. Still, each is only about 3% of a single year of world cement and steel output, because those are colossal industries.</p>
-<p>Copper is a different story. At the contested 20 to 70 tonnes per megawatt, a spread wide enough to tell us nobody really knows, the halls alone would swallow 4 to 14 million tonnes, somewhere between a sixth and three-fifths of a year of global mine production.<sup><a href="#ref-12">12</a>,<a href="#ref-18">18</a></sup> Concrete fills the chart. Copper is what could actually run out.</p>
+<h3 class="sub3">What it is made of</h3>
+<p>Regarding the materials needed, the best public reference is the ICEF's 200 MW model data center, which contains around 300,000 cubic meters of concrete in total and about 275 tonnes of steel per megawatt.<sup><a href="#ref-17">17</a></sup> If we scale it up, that is roughly 720 million tonnes of concrete and 55 million tonnes of steel. Large numbers, yet each is only about 3% of a year of world output, because those industries are vast.</p>
+<p>Copper is a different story. Estimates for AI halls run from 20 to 70 tonnes per megawatt, and at that range the halls alone would need 4 to 14 million tonnes, between a sixth and three-fifths of a year of the world's mine production.<sup><a href="#ref-12">12</a>,<a href="#ref-18">18</a></sup> Concrete dominates the volume, but copper can be the actual bottleneck.</p>
 
 <figure class="ex" id="ex6" data-n="6"><div class="lab">Exhibit 6</div>
 <div class="t">Concrete dominates the amount, but copper is the material that could run short</div>
@@ -263,9 +266,10 @@ th,td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:right}th:fi
 </section>
 
 <section class="sec" id="s5"><div class="secno">06</div>
-<h2>So, could it happen?</h2>
-<p>An AI assistant for every knowledge worker? Realistic today. The energy is trivial, the hardware exists, and each answer keeps getting cheaper. An AI agent doing a full share of every office job, at today's measured energy per task, is another matter entirely. It would need a grid the size of a continent's, built in years that equipment makers have already sold. The largest gas-turbine maker had about 10 GW of production slots left for 2029 and 2030 combined. Big transformers take two and a half to five years to arrive. We can't download either.</p>
-<p>The workable path runs somewhere in between, and it's narrow. Efficiency gains do some of the lifting. Agents get used where they earn their watt-hours, not everywhere. And someone orders turbines and transformers years before the model that needs them is even trained. So the real limit on AI at work isn't clever code. It's physical: turbines, transformers, copper, a metal refined almost entirely in one country, and the order books of a handful of factories.</p>
+<h2>So, is it realistic?</h2>
+<p>I think seeing the energy and material need for such widespread use of AI sets the limits much more realistically than assuming the current solutions could be scaled indefinitely without any constraints in energy use and materials. Analyzing these numbers would also draw more attention to the efficient use of AI solutions.</p>
+<p>An AI assistant for every knowledge worker is realistic now. The energy is small, the hardware exists, and the cost per answer keeps falling. However, an AI agent doing a full share of every knowledge worker's job, at today's measured energy per task, is not. It would need a grid the size of a large continent's, built in years that equipment makers have already sold. For example, the largest gas-turbine maker had about 10 GW of slots left for 2029 and 2030 combined, and big transformers take two and a half to five years to arrive.</p>
+<p>The realistic path sits between the two, and it runs through efficiency gains, through agents used where they earn their watt-hours, and through power equipment ordered years before the model that needs it has been trained. We can conclude that the bottleneck for AI at work is physical.</p>
 <div class="callout warn"><div class="k">What this model cannot tell you</div>Per-task energy figures come from different setups: Google's from its own fleet including overhead, Oviedo's from modeled frontier serving, KAIST's from a 70-billion-parameter research system. They are not strictly comparable, and the agent figure in particular reflects one workload on one setup. The model also leaves out training, networks, user devices and the energy of the human work the AI would replace. We should read every output as an order of magnitude.</div>
 </section>
 
